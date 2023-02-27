@@ -22,7 +22,13 @@ fn main() {
       color: Color::WHITE,
       brightness: 1.0 / 2.0f32,
     })
-    .add_plugins(DefaultPlugins)
+    .add_plugins(DefaultPlugins.set(WindowPlugin {
+      window: WindowDescriptor {
+        fit_canvas_to_parent: true,
+        ..default()
+      },
+      ..default()
+    }))
     .add_plugin(MaterialPlugin::<ShaderMaterial>::default())
     .add_plugin(LookTransformPlugin)
     .add_plugin(FpsCameraPlugin::default())
