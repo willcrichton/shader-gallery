@@ -1490,17 +1490,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "hall-of-shaders"
-version = "0.1.0"
-dependencies = [
- "bevy",
- "bevy-inspector-egui",
- "bevy_mod_fbx",
- "smooth-bevy-cameras",
- "take_mut",
-]
-
-[[package]]
 name = "hashbrown"
 version = "0.11.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2293,6 +2282,17 @@ dependencies = [
  "itoa",
  "ryu",
  "serde",
+]
+
+[[package]]
+name = "shader-gallery"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy-inspector-egui",
+ "bevy_mod_fbx",
+ "smooth-bevy-cameras",
+ "take_mut",
 ]
 
 [[package]]
