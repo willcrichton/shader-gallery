@@ -1,9 +1,5 @@
-struct ShaderMaterial {
-    time: f32
-};
-
-@group(1) @binding(0)
-var<uniform> material: ShaderMaterial;
+#import bevy_pbr::mesh_types
+#import bevy_pbr::mesh_view_bindings
 
 // @group(1) @binding(0)
 // var<uniform> material: CustomMaterial;
@@ -24,5 +20,5 @@ fn fragment0(
 fn fragment1(
     #import bevy_pbr::mesh_vertex_output
 ) -> @location(0) vec4<f32> {    
-    return vec4(uv.x, uv.y, 1., 1.);
+    return vec4(uv.x, uv.y, sin(globals.time), 1.);
 }
